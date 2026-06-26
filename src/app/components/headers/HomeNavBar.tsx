@@ -6,7 +6,12 @@ export function HomeNavbar() {
   const authMember = null;
 
   return (
-    <div className="home-navbar">
+    <div
+      className="home-navbar"
+      style={{
+        background: `url(/img/banner.webp) center/cover no-repeat`,
+      }}
+    >
       <Container sx={{ mt: "55px", height: "642px" }}>
         <Stack
           sx={{
