@@ -5,7 +5,10 @@ export function OtherNavbar() {
   const authMember = null;
 
   return (
-    <div className="other-navbar">
+    <div
+      className="other-navbar"
+      style={{ background: `url(/img/banner.webp) center/cover no-repeat` }}
+    >
       <Container className="navbar-container">
         <Stack className="menu">
           <Box>

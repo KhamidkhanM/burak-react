@@ -81,7 +81,10 @@ export function HomeNavbar() {
             </Box>
           </Stack>
           <Box className={"logo-frame"}>
-            <div className={"logo-img"}></div>
+            <div
+              className={"logo-img"}
+              style={{ background: `url(/img/logo.webp)` }}
+            ></div>
           </Box>
         </Stack>
       </Container>
