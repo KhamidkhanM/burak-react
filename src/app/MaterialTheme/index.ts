@@ -10,9 +10,6 @@ import shadow from './shadow';
 // Custom typography config — font sizes and weights for h1–h6 and other variants
 import typography from './typography';
 
-// maxWidth is imported from @mui/system but unused here (can be removed safely)
-import { maxWidth } from '@mui/system';
-
 /**
  * LIGHT THEME (DEFAULT)
  */
