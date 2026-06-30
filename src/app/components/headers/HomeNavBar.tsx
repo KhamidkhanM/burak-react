@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { Basket } from "./Basket";
 import "../../../css/navbar.css";
 
 export function HomeNavbar() {
@@ -47,7 +48,7 @@ export function HomeNavbar() {
                 Help
               </NavLink>
             </Box>
-            {/* BASKET */}
+            <Basket />
 
             {!authMember ? (
               <Box>
