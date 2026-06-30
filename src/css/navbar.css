@@ -94,7 +94,7 @@
 
 .home-navbar .navbar-container .header-frame .detail .wel-txt {
   width: 510px;
-  height: 42px;
+  min-height: 42px;
   font-family: "Roboto Serif";
   font-size: 36px;
   font-style: normal;
