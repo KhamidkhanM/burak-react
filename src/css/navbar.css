@@ -34,3 +34,91 @@
   height: 50px;
   border-radius: 24px;
 }
+
+.home-navbar a {
+  text-decoration: none;
+}
+
+.home-navbar .hover-line a {
+  z-index: 100;
+  color: #f8f8ff;
+}
+
+.home-navbar .underline {
+  content: "";
+  display: block;
+  border-bottom: solid 2px #d7b686;
+}
+
+.home-navbar .hover-line:after {
+  content: "";
+  display: block;
+  border-bottom: solid 2px #d7b686;
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+}
+
+.home-navbar .hover-line:hover:after {
+  transform: scaleX(1);
+}
+
+.home-navbar div.hover-line:after {
+  transform-origin: 0% 50%;
+}
+
+.home-navbar .navbar-container .header-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 462px;
+  margin-top: 142px;
+}
+
+.home-navbar .navbar-container .header-frame .detail {
+  display: flex;
+  flex-direction: column;
+  width: 510px;
+}
+
+.home-navbar .navbar-container .header-frame .detail .head-main-txt {
+  width: 450px;
+  height: 150px;
+  font-family: "Roboto Serif";
+  font-size: 50px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.75px;
+  color: #f8f8ff;
+}
+
+.home-navbar .navbar-container .header-frame .detail .service-txt {
+  width: 153px;
+  height: 23px;
+  margin-top: 23px;
+  font-family: "Roboto Serif";
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  color: #d5d5d5;
+}
+
+.home-navbar .navbar-container .detail .signup {
+  margin-top: 73px;
+}
+
+.home-navbar .navbar-container .detail .signup .signup-button {
+  width: 210px;
+  height: 60px;
+  border-radius: 4px;
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  color: #f8f8ff;
+  background: #1976d2;
+}
