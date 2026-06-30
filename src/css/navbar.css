@@ -4,6 +4,14 @@
   height: 773px;
 }
 
+.home-navbar .navbar-container .header-frame {
+  margin-top: 142px;
+  height: 462px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .home-navbar a {
   text-decoration: none;
 }
