@@ -82,7 +82,7 @@
 
 .home-navbar .navbar-container .header-frame .detail .head-main-txt {
   width: 450px;
-  height: 150px;
+  min-height: 150px;
   font-family: "Roboto Serif";
   font-size: 50px;
   font-weight: 500;
@@ -121,4 +121,18 @@
   text-align: center;
   color: #f8f8ff;
   background: #1976d2;
+}
+
+.home-navbar .navbar-container .logo-frame {
+  flex: 1;
+  height: 462px;
+  overflow: hidden;
+}
+
+.home-navbar .navbar-container .logo-frame .logo-img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(25%);
 }
