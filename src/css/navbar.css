@@ -82,7 +82,7 @@
 
 .home-navbar .navbar-container .header-frame .detail .head-main-txt {
   width: 450px;
-  height: 150px;
+  min-height: 150px;
   font-family: "Roboto Serif";
   font-size: 50px;
   font-weight: 500;
