@@ -1,21 +1,17 @@
 import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import { Basket } from "./Basket";
-import "../../../css/navbar.css";
+import Basket from "./Basket";
 
-export function HomeNavbar() {
+export default function HomeNavbar() {
   const authMember = null;
 
   return (
-    <div
-      className="home-navbar"
-      style={{ background: `url(/img/banner.webp) center/cover no-repeat` }}
-    >
+    <div className="home-navbar">
       <Container className="navbar-container">
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg" alt="logo" />
+              <img className="brand-logo" src="/icons/bumarak.svg" />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -59,13 +55,12 @@ export function HomeNavbar() {
             ) : (
               <img
                 className="user-avatar"
-                src="/icons/default-user.svg"
-                alt="user avatar"
+                src={"/icons/default-user.svg"}
+                aria-haspopup={"true"}
               />
             )}
           </Stack>
         </Stack>
-
         <Stack className={"header-frame"}>
           <Stack className={"detail"}>
             <Box className={"head-main-txt"}>
@@ -82,10 +77,7 @@ export function HomeNavbar() {
             </Box>
           </Stack>
           <Box className={"logo-frame"}>
-            <div
-                className={"logo-img"}
-                style={{ background: `url(/img/logo.webp) center/contain no-repeat` }}
-            ></div>
+            <div className={"logo-img"}></div>
           </Box>
         </Stack>
       </Container>

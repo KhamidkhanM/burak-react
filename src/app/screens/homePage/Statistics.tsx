@@ -1,7 +1,8 @@
+import React from "react";
 import { Box, Container, Stack } from "@mui/material";
-import { Divider } from "../../components/divider";
+import Divider from "../../components/divider";
 
-export function Statistics() {
+export default function Statistics() {
   return (
     <div className={"static-frame"}>
       <Container>

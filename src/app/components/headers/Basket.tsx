@@ -5,12 +5,17 @@ import Badge from "@mui/material/Badge";
 import Menu from "@mui/material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useHistory } from "react-router-dom";
 
-export function Basket() {
+export default function Basket() {
+  const authMember = null;
+  const history = useHistory();
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
   /** HANDLERS **/
+
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(e.currentTarget);
   };
@@ -29,7 +34,7 @@ export function Basket() {
         onClick={handleClick}
       >
         <Badge badgeContent={3} color="secondary">
-          <img src={"/icons/shopping-cart.svg"} alt="cart" />
+          <img src={"/icons/shopping-cart.svg"} />
         </Badge>
       </IconButton>
       <Menu
@@ -37,31 +42,30 @@ export function Basket() {
         id="account-menu"
         open={open}
         onClose={handleClose}
-        slotProps={{
-          paper: {
-            elevation: 0,
-            sx: {
-              overflow: "visible",
-              filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-              mt: 1.5,
-              "& .MuiAvatar-root": {
-                width: 32,
-                height: 32,
-                ml: -0.5,
-                mr: 1,
-              },
-              "&:before": {
-                content: '""',
-                display: "block",
-                position: "absolute",
-                top: 0,
-                right: 14,
-                width: 10,
-                height: 10,
-                bgcolor: "background.paper",
-                transform: "translateY(-50%) rotate(45deg)",
-                zIndex: 0,
-              },
+        // onClick={handleClose}
+        PaperProps={{
+          elevation: 0,
+          sx: {
+            overflow: "visible",
+            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+            mt: 1.5,
+            "& .MuiAvatar-root": {
+              width: 32,
+              height: 32,
+              ml: -0.5,
+              mr: 1,
+            },
+            "&:before": {
+              content: '""',
+              display: "block",
+              position: "absolute",
+              top: 0,
+              right: 14,
+              width: 10,
+              height: 10,
+              bgcolor: "background.paper",
+              transform: "translateY(-50%) rotate(45deg)",
+              zIndex: 0,
             },
           },
         }}
@@ -72,17 +76,14 @@ export function Basket() {
           <Box className={"all-check-box"}>
             <div>Cart is empty!</div>
           </Box>
+
           <Box className={"orders-main-wrapper"}>
             <Box className={"orders-wrapper"}>
               <Box className={"basket-info-box"}>
                 <div className={"cancel-btn"}>
                   <CancelIcon color={"primary"} />
                 </div>
-                <img
-                  src={"/img/fresh.webp"}
-                  className={"product-img"}
-                  alt="product"
-                />
+                <img src={"/img/fresh.webp"} className={"product-img"} />
                 <span className={"product-name"}>Kebab</span>
                 <p className={"product-price"}>$10 x 1</p>
                 <Box sx={{ minWidth: 120 }}>
