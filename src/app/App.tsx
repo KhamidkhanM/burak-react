@@ -33,10 +33,10 @@ function App() {
           <HelpPage />
         </Route>
         <Route path="/">
+          {/*<Test /> */}
           <HomePage />
         </Route>
       </Switch>
-      <Test />  
       <Footer />
     </>
   );
