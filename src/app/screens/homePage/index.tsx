@@ -30,6 +30,8 @@ export default function HomePage() {
   const { setPopularDishes } = actionDispatch(dispatch);
   const { popularDishes } = useSelector(popularDishesRetriever);
 
+  console.log(process.env.REACT_APP_API_URL);
+
   useEffect(() => {
     // Backend server data request => Data
     // Slice: Data => Store
