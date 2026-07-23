@@ -2,7 +2,7 @@ import { MemberStatus, MemberType } from "../enums/member.enum";
 
 // a full member document as stored/returned from MongoDB
 export interface Member {
-    _id: String; // Mongo document id
+    _id: string; // Mongo document id
     memberType: MemberType; // USER / RESTAURANT / ADMIN
     memberStatus: MemberStatus; // ACTIVE / INACTIVE / DELETE / BLOCK
     memberNick: string; // login nickname, unique
