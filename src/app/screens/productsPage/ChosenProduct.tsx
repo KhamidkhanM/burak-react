@@ -59,7 +59,7 @@ export default function ChosenProduct() {
       .catch((err) => console.log(err));
 
     const member = new MemberService();
-    member.getRestaurant(productId)
+    member.getRestaurant()
       .then((data) => {
         setRestaurant(data);
       })
@@ -95,7 +95,7 @@ export default function ChosenProduct() {
         <Stack className={"chosen-product-info"}>
           <Box className={"info-box"}>
             <strong className={"product-name"}>{chosenProduct?.productName}</strong>
-            <span className={"resto-name"}>{chosenProduct?.restaurantName}</span>
+            <span className={"resto-name"}>{restaurant?.memberNick}</span>
             <span className={"resto-name"}>010-2469-4424</span>
             <Box className={"rating-box"}>
               <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
@@ -106,7 +106,7 @@ export default function ChosenProduct() {
                 </div>
               </div>
             </Box>
-            <p className={"product-desc"}>{chosenProduct?.productDescription || "No Description available."}</p>
+            <p className={"product-desc"}>{chosenProduct?.productDesc || "No Description available."}</p>
             <Divider height="1" width="100%" bg="#000000" />
             <div className={"product-price"}>
               <span>Price:</span>
