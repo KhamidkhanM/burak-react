@@ -30,7 +30,7 @@ export interface MemberInput {
 }
 
 // fields required for login
-export interface LogInput {
+export interface LoginInput {
     memberNick: string; // nickname to look up
     memberPassword: string; // plain password to compare against the hash
 }
