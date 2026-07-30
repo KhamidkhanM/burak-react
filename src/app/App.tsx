@@ -14,7 +14,6 @@ import "../css/footer.css";
 import useBasket from "./hooks/useBasket";
 import AuthenticationModal from "./components/auth";
 import { sweetErrorHandling, sweetTopSuccessAlert } from "../lib/sweetAlert";
-import { Messages } from "../lib/config";
 import MemberService from "./services/MemberService";
 import { useGlobals } from "./hooks/useGlobal";
 
@@ -42,7 +41,7 @@ function App() {
       setAuthMember(null);
     } catch (err) {
       console.log(err);
-      sweetErrorHandling(Messages.error1);
+      sweetErrorHandling(err);
     }
   };
 
