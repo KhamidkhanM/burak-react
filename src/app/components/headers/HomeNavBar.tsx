@@ -103,7 +103,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                 src={
                   authMember?.memberImage
                     ? `${serverApi}/${authMember?.memberImage}`
-                    : "/icons/user-avatar.svg"
+                    : "/icons/default-user.svg"
                 }
                 aria-haspopup={"true"}
                 onClick={handleLogoutClick}
