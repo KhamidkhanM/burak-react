@@ -23,6 +23,7 @@ export interface OrderItemInput {
 
 // a full order document as stored/returned from MongoDB
 export interface Order {
+    _id: string; // Mongo document id
     orderTotal: number; // items total + delivery fee
     orderDelivery: number; // delivery fee (0 if the order is big enough)
     orderStatus: OrderStatus; // current state of the order
