@@ -16,6 +16,8 @@ const pausedOrdersRetriever = createSelector(
   (pausedOrders) => ({ pausedOrders })
 );
 
+/** HANDLERS **/
+
 export default function PausedOrders() {
   const {pausedOrders} = useSelector(pausedOrdersRetriever)
   return (
@@ -85,7 +87,7 @@ export default function PausedOrders() {
               style={{ width: 300, height: 300 }}
             />
           </Box>
-        ))}
+        ) )}
       </Stack>
     </TabPanel>
   );
