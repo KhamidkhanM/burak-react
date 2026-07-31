@@ -8,8 +8,13 @@ import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { retrieveProcessOrders } from "./selector";
 import { Product } from "../../../lib/types/product";
-import { serverApi } from "../../../lib/config";
-import { Order, OrderItem } from "../../../lib/types/order";
+import { Messages, serverApi } from "../../../lib/config";
+import { Order, OrderItem, OrderUpdateInput } from "../../../lib/types/order";
+import { useGlobals } from "../../hooks/useGlobal";
+import { OrderStatus } from "../../../lib/enums/order.enum";
+import OrderService from "../../services/OrderService";
+import { sweetErrorHandling } from "../../../lib/sweetAlert";
+import { T } from "../../../lib/types/common";
 
 /** REDUX SLICE & SELECTOR **/
 const processOrdersRetriever = createSelector(
@@ -17,8 +22,35 @@ const processOrdersRetriever = createSelector(
   (processOrders) => ({ processOrders })
 );
 
-export default function ProcessOrders() {
+interface ProcessOrderProps {
+  setValue: (input: string) => void;
+}
+
+export default function ProcessOrders(props: ProcessOrderProps) {
+  const {setValue} = props;
   const {processOrders} = useSelector(processOrdersRetriever)
+  const {authMember, setOrderBuilder} = useGlobals();
+
+const finishedOrderHandler = async (e: T) => {
+  try {
+    if(!authMember) throw new Error(Messages.error2) 
+    const orderId = e.currentTarget.value;
+    const input: OrderUpdateInput = {orderId: orderId, orderStatus: OrderStatus.FINISH}
+
+    const confirmation = window.confirm("Have you recieved your order?");
+    if (confirmation) {
+      const order = new OrderService();
+      await order.updateOrder(input);
+      setValue("3");
+      setOrderBuilder(new Date());
+    }
+  } catch(err) {
+    console.log(err);
+    sweetErrorHandling(err).then();
+
+  }
+};
+
   return (
     <TabPanel value={"2"}>
       <Stack>
@@ -67,7 +99,12 @@ export default function ProcessOrders() {
                 <p className={"data-compl"}>
                   {moment(order.updatedAt).format("YY-MM-DD HH:mm")}
                 </p>
-                <Button variant="contained" className={"verify-button"}>
+                <Button 
+                  value={order._id}
+                  variant="contained" 
+                  className={"verify-button"}
+                  onClick={finishedOrderHandler}
+                >
                   Verify to Fulfil
                 </Button>
               </Box>
