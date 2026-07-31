@@ -67,14 +67,15 @@ export default function FinishedOrders() {
           );
         })}
 
-        {!finishedOrders || (finishedOrders.length === 0 && (
+        {(!finishedOrders || finishedOrders.length === 0) && (
           <Box display={"flex"} flexDirection={"row"} justifyContent={"center"}>
             <img
               src={"/icons/noimage-list.svg"}
               style={{ width: 300, height: 300 }}
+              alt="No orders"
             />
           </Box>
-        ) )}
+        )}
       </Stack>
     </TabPanel>
   );

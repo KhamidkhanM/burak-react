@@ -112,14 +112,15 @@ const finishedOrderHandler = async (e: T) => {
           );
         })}
 
-        {!processOrders || (processOrders.length === 0 && (
+        {(!processOrders || processOrders.length === 0) && (
           <Box display={"flex"} flexDirection={"row"} justifyContent={"center"}>
             <img
               src={"/icons/noimage-list.svg"}
               style={{ width: 300, height: 300 }}
+              alt="No orders"
             />
           </Box>
-        ) )}
+        )}
       </Stack>
     </TabPanel>
   );
