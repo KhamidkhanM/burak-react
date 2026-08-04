@@ -15,7 +15,7 @@ import useBasket from "./hooks/useBasket";
 import AuthenticationModal from "./components/auth";
 import { sweetErrorHandling, sweetTopSuccessAlert } from "../lib/sweetAlert";
 import MemberService from "./services/MemberService";
-import { useGlobals } from "./hooks/useGlobal";
+import { useGlobals } from "./hooks/useGlobals";
 
 function App() {
   const location = useLocation();

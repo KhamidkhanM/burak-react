@@ -11,7 +11,7 @@ import { CartItem } from "../../../lib/types/search";
 import { Messages, serverApi } from "../../../lib/config";
 import { sweetErrorHandling } from "../../../lib/sweetAlert";
 import OrderService from "../../services/OrderService";
-import { useGlobals } from "../../hooks/useGlobal";
+import { useGlobals } from "../../hooks/useGlobals";
 
 interface BasketProps {
   cartItems: CartItem[];

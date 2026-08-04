@@ -42,5 +42,5 @@ export interface MemberUpdateInput {
     memberPassword?: string; // change password
     memberAddress?: string; // change address
     memberDesc?: string; // change description
-    memberImage?: string; // change image
+    memberImage?: string | File; // change image (File when a new one is picked)
 }

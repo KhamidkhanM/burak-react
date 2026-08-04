@@ -10,7 +10,7 @@ import { retrieveProcessOrders } from "./selector";
 import { Product } from "../../../lib/types/product";
 import { Messages, serverApi } from "../../../lib/config";
 import { Order, OrderItem, OrderUpdateInput } from "../../../lib/types/order";
-import { useGlobals } from "../../hooks/useGlobal";
+import { useGlobals } from "../../hooks/useGlobals";
 import { OrderStatus } from "../../../lib/enums/order.enum";
 import OrderService from "../../services/OrderService";
 import { sweetErrorHandling } from "../../../lib/sweetAlert";

@@ -11,7 +11,7 @@ import { Messages, serverApi } from "../../../lib/config";
 import { Order, OrderItem, OrderUpdateInput } from "../../../lib/types/order";
 import { sweetErrorHandling } from "../../../lib/sweetAlert";
 import { OrderStatus } from "../../../lib/enums/order.enum";
-import { useGlobals } from "../../hooks/useGlobal";
+import { useGlobals } from "../../hooks/useGlobals";
 import OrderService from "../../services/OrderService";
 import { T } from "../../../lib/types/common";
 

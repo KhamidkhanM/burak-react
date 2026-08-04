@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
 import { useEffect, useState } from "react";
 import { CartItem } from "../../../lib/types/search";
-import { useGlobals } from "../../hooks/useGlobal";
+import { useGlobals } from "../../hooks/useGlobals";
 import { serverApi } from "../../../lib/config";
 import { Logout } from "@mui/icons-material";
 
